@@ -1,10 +1,15 @@
-import { Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import "./App.scss";
 import Button from "./component/Button";
-import { useState } from "react";
 import Input from "./component/Input";
 import Navbar from "./component/Navbar";
 import UserInfoEdit from "./page/userInfoEdit";
+import { MainPage } from "./page/MainPage";
+import { CastingJobsPage } from "./page/CastingJobsPage";
+import { ActorProfilePage } from "./page/ActorProfilePage";
+import { SignUpPage } from "./page/SignUpPage";
+import { LoginPage } from "./page/LoginPage";
+
 
 function App() {
   return (
@@ -13,9 +18,17 @@ function App() {
         <Navbar />
       </header>
       <main className="flex items-center justify-center max-w-[1350px] ">
-        <UserInfoEdit />
-      </main>
-      {/* <div className="flex gap-[5px]">
+        {/* <UserInfoEdit /> */}
+        <Routes>
+          <Route path={'/'} element={<MainPage />} />
+          <Route path={'/casting_jobs'} element={<CastingJobsPage />} />
+          <Route path={'/actor_profile'} element={<ActorProfilePage />} />
+          <Route path={'/sign_up'} element={<SignUpPage />} />
+          <Route path={'/login'} element={<LoginPage />} />
+        </Routes>
+
+
+        {/* <div className="flex gap-[5px]">
         <Button label={"수 정"}></Button>
         <Button label={"장바구니"}></Button>
         <Button
@@ -43,6 +56,7 @@ function App() {
         />
         <input type="text" className="blue-border" /> */}
       {/* </div> */}
+      </main>
     </div>
   );
 }
