@@ -11,12 +11,12 @@ const ButtonVariants = cva(
       variant: {
         default: "active:scale-100 bg-[#041F32]",
         orange: "bg-[#E96C32]",
-        lightgray: "bg-[#D9D9D9]",
+        lightgray: "bg-[#D9D9D9] text-[#4C4C4C]",
       },
       size: {
         default: "w-[6rem] h-[3rem] text-[0.875rem]",
         sm: "w-[3.5rem] h-[2.375rem] text-[0.775rem] tracking-[.17em]",
-        md: "w-[6.875rem] h-[2.375rem] text-[0.775rem] rounded-md",
+        md: "w-[6.875rem] h-[2.375rem] text-[0.775rem] rounded-lg",
         wlg: "w-[8.5rem] h-[2.375rem] text-[0.775rem]",
       },
       isActive: {
