@@ -1,15 +1,18 @@
-import axios from "axios";
+import Button from "./Button";
 
-const fetchJobPostings = async () => {
-  const response = await axios.get("/src/data/jobPosting.JSON");
-  return response.data;
+export const CastingJobList = ({ cast }) => {
+  return (
+    <div className="h-[300px] w-[300px]">
+      <img
+        src="https://media.istockphoto.com/id/931643150/vector/picture-icon.jpg?s=612x612&w=0&k=20&c=St-gpRn58eIa8EDAHpn_yO4CZZAnGD6wKpln9l3Z3Ok="
+        className="w-[200px] h-[200px]"
+      />
+      <h3>{cast.title}</h3>
+      <button>북마크</button>
+      <p>{cast.closing_date}</p>
+      <Button label={"마감"} />
+      <Button label={cast.category} />
+      <Button label={cast.category_sub} />
+    </div>
+  );
 };
-
-const CastingJoblistItem = ({ cast }) => {
-  <div>
-    <img src="https://media.istockphoto.com/id/931643150/vector/picture-icon.jpg?s=612x612&w=0&k=20&c=St-gpRn58eIa8EDAHpn_yO4CZZAnGD6wKpln9l3Z3Ok=" />
-    <h3>{cast.title}</h3>
-  </div>;
-};
-
-const CastingJobList = () => {};
