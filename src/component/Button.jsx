@@ -4,7 +4,7 @@ import { cn } from "../util/cn";
 const ButtonVariants = cva(
   ` flex justify-center items-center active:scale-95 rounded-xl 
     font-bold text-slate-100 transition-all shadow-md
-    hover:scale-105 duration-200 tracking-[.01em] p-[3px] ease-in-out
+     duration-200 tracking-[.01em] p-[3px] ease-in-out
     `,
   {
     variants: {
@@ -14,10 +14,12 @@ const ButtonVariants = cva(
         lightgray: "bg-[#D9D9D9] text-[#4C4C4C]",
       },
       size: {
-        default: "w-[6rem] h-[3rem] text-[0.875rem]",
-        sm: "w-[3.5rem] h-[2.375rem] text-[0.775rem] tracking-[.17em]",
-        md: "w-[6.875rem] h-[2.375rem] text-[0.775rem] rounded-lg",
-        wlg: "w-[8.5rem] h-[2.375rem] text-[0.775rem]",
+        default: "w-[6rem] h-[3rem] text-[0.875rem] hover:scale-105",
+        xxs: "w-[3rem] h-[1.75rem] text-[0.775rem] hover:none",
+        xs: "w-[4rem] h-[2rem] text-[0.775rem] hover:none",
+        sm: "w-[3.5rem] h-[2.375rem] text-[0.775rem] tracking-[.17em] hover:scale-105",
+        md: "w-[6.875rem] h-[2.375rem] text-[0.775rem] rounded-lg hover:scale-105",
+        wlg: "w-[8.5rem] h-[2.375rem] text-[0.775rem] hover:scale-105",
       },
       isActive: {
         true: "bg-[#E96C32]",

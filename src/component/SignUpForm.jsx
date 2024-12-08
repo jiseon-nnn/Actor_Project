@@ -7,7 +7,7 @@ import { InputWithButton } from "./InputWithButton";
 
 export const SignUpForm = () => {
   return (
-    <div className="flex justify-start items-center flex-wrap gap-[10px] text-left rounded-[10px] border-black border-[1px] p-10 w-[500px]">
+    <div className="flex justify-start items-center flex-wrap gap-[10px] text-left rounded-[10px] border boder-[#E6E6E6] border-solid p-10 w-[500px] border boder-[#E6E6E6] border-solid">
       <InputWithButton
         label="아이디"
         inputProps={{

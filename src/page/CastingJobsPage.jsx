@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { CastingJobList } from "../component/CastingJobList";
+import { CastingJobCard } from "../component/CastingJobCard";
 
 export const CastingJobsPage = () => {
   const [cast, setCast] = useState([]);
@@ -30,9 +30,9 @@ export const CastingJobsPage = () => {
   }
 
   return (
-    <div className="flex gap-[50px]">
+    <div className="flex flex-wrap gap-10  w-[1000px] ">
       {cast.map((data) => (
-        <CastingJobList key={data.content_id} cast={data} />
+        <CastingJobCard key={data.content_id} cast={data} />
       ))}
     </div>
   );
