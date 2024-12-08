@@ -24,7 +24,7 @@ const ButtonVariants = cva(
         false: "bg-[#D9D9D9]",
       },
       isLogin: {
-        true: "mt-[18px]",
+        true: "",
       },
     },
     defaultVariants: {

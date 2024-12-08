@@ -6,8 +6,8 @@ import InputBox from "./Input";
 import { InputWithButton } from "./InputWithButton";
 
 export const SignUpForm = () => {
-  return(
-    <div className="flex justify-start items-center flex-wrap gap-[10px] text-left rounded-[10px] border-black border-[1px] p-10 w-[600px]">
+  return (
+    <div className="flex justify-start items-center flex-wrap gap-[10px] text-left rounded-[10px] border-black border-[1px] p-10 w-[500px]">
       <InputWithButton
         label="아이디"
         inputProps={{
@@ -85,6 +85,5 @@ export const SignUpForm = () => {
       />
       <Button label={"회원가입"} />
     </div>
-  )
+  );
 };
-
