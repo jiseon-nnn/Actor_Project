@@ -8,3 +8,26 @@ body {
   margin: 0 auto;
   padding: 2rem;
 }
+
+.social_login_line_text {
+  display: inline-block;
+  position: relative;
+}
+
+.social_login_line_text::before,
+.social_login_line_text::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 35%;
+  height: 1px;
+  background-color: rgb(156 163 175);
+}
+
+.social_login_line_text::before {
+  left: 0;
+}
+
+.social_login_line_text::after {
+  right: 0;
+}
