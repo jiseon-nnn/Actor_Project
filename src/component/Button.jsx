@@ -15,8 +15,8 @@ const ButtonVariants = cva(
       },
       size: {
         default: "w-[6rem] h-[3rem] text-[0.875rem] hover:scale-105",
-        xxs: "w-[3rem] h-[1.75rem] text-[0.775rem] hover:none",
-        xs: "w-[4rem] h-[2rem] text-[0.775rem] hover:none",
+        xxs: "w-[2.7rem] h-[1.3rem] text-[0.775rem] hover:none",
+        xs: "w-[4rem] h-[1.7rem] text-[0.775rem] hover:none",
         sm: "w-[3.5rem] h-[2.375rem] text-[0.775rem] tracking-[.17em] hover:scale-105",
         md: "w-[6.875rem] h-[2.375rem] text-[0.775rem] rounded-lg hover:scale-105",
         wlg: "w-[8.5rem] h-[2.375rem] text-[0.775rem] hover:scale-105",
