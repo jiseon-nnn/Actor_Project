@@ -1,4 +1,5 @@
+import { useState } from "react";
 
-export const CastingJobsPage = ()=> {
-    
-}
+export const CastingJobsPage = () => {
+  return <div></div>;
+};
