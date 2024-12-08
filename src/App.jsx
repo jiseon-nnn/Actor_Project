@@ -1,23 +1,22 @@
-import { Route, Routes } from "react-router-dom";
-import "./App.scss";
-import Button from "./component/Button";
-import Input from "./component/Input";
-import Navbar from "./component/Navbar";
-import UserInfoEdit from "./page/userInfoEdit";
-import { MainPage } from "./page/MainPage";
-import { CastingJobsPage } from "./page/CastingJobsPage";
-import { ActorProfilePage } from "./page/ActorProfilePage";
-import { SignUpPage } from "./page/SignUpPage";
-import { LoginPage } from "./page/LoginPage";
-
+import { Route, Routes } from 'react-router-dom';
+import './App.scss';
+import Button from './component/Button';
+import Input from './component/Input';
+import Navbar from './component/Navbar';
+import UserInfoEdit from './page/userInfoEdit';
+import { MainPage } from './page/MainPage';
+import { CastingJobsPage } from './page/CastingJobsPage';
+import { ActorProfilePage } from './page/ActorProfilePage';
+import { SignUpPage } from './page/SignUpPage';
+import { LoginPage } from './page/LoginPage';
 
 function App() {
   return (
-    <div className="w-full justify-center items-center flex flex-col">
-      <header className="flex items-center h-[100px] w-5/6">
+    <div className="w-full h-full items-center flex flex-col">
+      <header className="flex justify-center items-center h-[100px] w-full">
         <Navbar />
       </header>
-      <main className="flex items-center justify-center max-w-[1350px] ">
+      <main className="flex justify-center items-center max-w-[1350px] w-full h-full ">
         {/* <UserInfoEdit /> */}
         <Routes>
           <Route path={'/'} element={<MainPage />} />
@@ -26,7 +25,6 @@ function App() {
           <Route path={'/sign_up'} element={<SignUpPage />} />
           <Route path={'/login'} element={<LoginPage />} />
         </Routes>
-
 
         {/* <div className="flex gap-[5px]">
         <Button label={"수 정"}></Button>
@@ -55,7 +53,7 @@ function App() {
           className="bg-green-50 border border-green-500 text-green-500  placeholder-green-700 text-sm rounded-lg ring-green-500 focus:border-green-500 block w-full p-2.5 "
         />
         <input type="text" className="blue-border" /> */}
-      {/* </div> */}
+        {/* </div> */}
       </main>
     </div>
   );

@@ -1,13 +1,13 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
-    <div className="flex w-full justify-between font-bold">
+    <div className="flex w-5/6 justify-between font-bold border-b-[#E6E6E6] border-b-solid border-b pb-7">
       <Link to={'/'}>
-      <h1 className="text-start text-2xl">
-        actor <br />
-        project
-      </h1>
+        <h1 className="text-start text-2xl">
+          actor <br />
+          project
+        </h1>
       </Link>
       <nav className="flex items-end gap-[400px] text-xl">
         <ul className="flex gap-[200px]">
