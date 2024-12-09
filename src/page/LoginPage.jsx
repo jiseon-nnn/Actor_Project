@@ -27,17 +27,17 @@ export const LoginPage = () => {
           <img
             src={kakaotalkLoginButton}
             alt="Kakaotalk Login Button"
-            className="w-[50px] h-[50px"
+            className="w-[50px] h-[50px cursor-pointer"
           />
           <img
             src={naverLoginButton}
             alt="Naver Login Button"
-            className="w-[50px] h-[50px"
+            className="w-[50px] h-[50px cursor-pointer"
           />
           <img
             src={googleLoginButton}
             alt="Google Login Button"
-            className="w-[50px] h-[50px"
+            className="w-[50px] h-[50px cursor-pointer"
           />
         </div>
       </section>
