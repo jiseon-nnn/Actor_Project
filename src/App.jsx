@@ -7,20 +7,27 @@ import { ActorProfilePage } from "./page/ActorProfilePage";
 import { SignUpPage } from "./page/SignUpPage";
 import { LoginPage } from "./page/LoginPage";
 import { PersonalSignUpPage } from "./page/PersonalSignUpPage";
+import { CastingJobCreatePage } from "./page/CastingJobCreatePage";
+import { CompanySignUpPage } from "./page/CompanySignUpPage";
 
 function App() {
   return (
     <div className="w-full h-full items-center flex flex-col">
-      <header className="flex justify-center items-center h-[100px] w-full">
+      <header className="flex justify-center items-center h-[150px] w-full fixed z-10">
         <Navbar />
       </header>
-      <main className="flex justify-center items-center max-w-[1350px] w-full h-full ">
+      <main className="flex justify-center items-center max-w-[1350px] w-full h-screen pt-[150px] relative">
         <Routes>
           <Route path={"/"} element={<MainPage />} />
           <Route path={"/casting_jobs"} element={<CastingJobsPage />} />
+          <Route
+            path={"/create_casting_job"}
+            element={<CastingJobCreatePage />}
+          />
           <Route path={"/actor_profile"} element={<ActorProfilePage />} />
           <Route path={"/sign_up"} element={<SignUpPage />} />
           <Route path={"/sign_up/personal"} element={<PersonalSignUpPage />} />
+          <Route path={"/sign_up/company"} element={<CompanySignUpPage />} />
           <Route path={"/login"} element={<LoginPage />} />
         </Routes>
       </main>

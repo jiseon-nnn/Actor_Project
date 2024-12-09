@@ -2,11 +2,12 @@ html,
 body {
   width: 100%;
   height: 100%;
+  box-sizing: border-box;
 }
 #root {
   height: 100%;
   margin: 0 auto;
-  padding: 2rem;
+  box-sizing: border-box;
 }
 
 .social_login_line_text {
@@ -16,7 +17,7 @@ body {
 
 .social_login_line_text::before,
 .social_login_line_text::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 50%;
   width: 35%;

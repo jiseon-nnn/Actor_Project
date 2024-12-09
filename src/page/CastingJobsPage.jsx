@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { CastingJobCard } from "../component/CastingJobCard";
-import Button from "../component/Button";
+import { useNavigate } from "react-router-dom";
+import { StyledButton } from "../component/StyledButton";
 
 export const CastingJobsPage = () => {
   const [cast, setCast] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const loadCastData = async () => {
@@ -32,7 +34,11 @@ export const CastingJobsPage = () => {
   return (
     <div className="h-full  gap-5">
       <div className="flex justify-end gap-5">
-        <Button label={"새로운 공고 등록"} size={"xl"} />
+        <StyledButton
+          label={"새로운 공고 등록"}
+          size={"xl"}
+          onClick={() => navigate("/create_casting_job")}
+        />
       </div>
       <div className=" flex flex-wrap gap-10 h-7 w-[1000px]">
         {cast.reverse().map((data) => (
