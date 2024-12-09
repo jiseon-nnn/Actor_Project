@@ -1,8 +1,14 @@
+<<<<<<< Updated upstream
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { CastingJobCard } from "../component/CastingJobCard";
 import Button from "../component/Button";
 import { useNavigate } from "react-router-dom";
+=======
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+import { CastingJobCard } from '../component/CastingJobCard';
+>>>>>>> Stashed changes
 
 export const CastingJobsPage = () => {
   const [cast, setCast] = useState([]);
@@ -13,8 +19,12 @@ export const CastingJobsPage = () => {
   useEffect(() => {
     const loadCastData = async () => {
       try {
-        const response = await axios.get("/mockup_data/castPosting.JSON");
+        const response = await axios.get('/mockup_data/castPosting.JSON');
         setCast(response.data);
+<<<<<<< Updated upstream
+=======
+        console.log('Fetched Data:', response.data);
+>>>>>>> Stashed changes
       } catch (err) {
         setError(err);
       } finally {
@@ -32,6 +42,7 @@ export const CastingJobsPage = () => {
   }
 
   return (
+<<<<<<< Updated upstream
     <div className="h-full  gap-5">
       <div className="flex justify-end gap-5">
         <Button
@@ -44,6 +55,12 @@ export const CastingJobsPage = () => {
           <CastingJobCard key={data.content_id} cast={data} />
         ))}
       </div>
+=======
+    <div className="flex flex-wrap gap-10  w-[1000px]">
+      {cast.map((data) => (
+        <CastingJobCard key={data.content_id} cast={data} />
+      ))}
+>>>>>>> Stashed changes
     </div>
   );
 };

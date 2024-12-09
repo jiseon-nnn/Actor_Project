@@ -7,10 +7,14 @@ import { InputWithButton } from "./InputWithButton";
 
 export const PersonalSignUpForm = () => {
   return (
+<<<<<<< Updated upstream
     <div className="flex justify-start items-center flex-wrap gap-[10px] text-left rounded-[10px] border boder-[#E6E6E6] border-solid p-10 w-[500px]">
       <p className='font-bold text-[1.7rem]'>
         회원가입
       </p>
+=======
+    <div className="flex justify-start items-center flex-wrap gap-[10px] text-left rounded-[10px] border boder-[#E6E6E6] border-solid p-10 w-[500px] ">
+>>>>>>> Stashed changes
       <InputWithButton
         label="아이디"
         inputProps={{
