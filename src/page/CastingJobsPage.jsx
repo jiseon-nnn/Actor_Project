@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { CastingJobCard } from "../component/CastingJobCard";
+import Button from "../component/Button";
 
 export const CastingJobsPage = () => {
   const [cast, setCast] = useState([]);
@@ -29,10 +30,15 @@ export const CastingJobsPage = () => {
   }
 
   return (
-    <div className="flex flex-wrap gap-10  w-[1000px] ">
-      {cast.map((data) => (
-        <CastingJobCard key={data.content_id} cast={data} />
-      ))}
+    <div className="h-full  gap-5">
+      <div className="flex justify-end gap-5">
+        <Button label={"새로운 공고 등록"} size={"xl"} />
+      </div>
+      <div className=" flex flex-wrap gap-10 h-7 w-[1000px]">
+        {cast.reverse().map((data) => (
+          <CastingJobCard key={data.content_id} cast={data} />
+        ))}
+      </div>
     </div>
   );
 };

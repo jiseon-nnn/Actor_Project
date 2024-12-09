@@ -1,10 +1,21 @@
 import Button from "./Button";
 import { DeadlineButton } from "./DeadlineButton";
 import { BookmarkButton } from "./BookmarkButton";
+import { useNavigate } from "react-router-dom";
 
 export const CastingJobCard = ({ cast }) => {
+  const navigate = useNavigate();
+  const content_id = cast.content_id;
+  const handler = (id) => {
+    navigate(`/casting_jobs/${id}`);
+  };
   return (
-    <div className=" w-[200px] border boder-[#E6E6E6] border-solid rounded-xl ">
+    <div
+      onClick={() => {
+        handler(content_id);
+      }}
+      className=" w-[200px] border boder-[#E6E6E6] border-solid rounded-xl "
+    >
       <img
         src="https://media.istockphoto.com/id/931643150/vector/picture-icon.jpg?s=612x612&w=0&k=20&c=St-gpRn58eIa8EDAHpn_yO4CZZAnGD6wKpln9l3Z3Ok="
         className="w-[200px] h-[200px] rounded-xl"
