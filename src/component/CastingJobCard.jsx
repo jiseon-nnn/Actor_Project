@@ -1,13 +1,13 @@
-import Button from "./Button";
 import { DeadlineButton } from "./DeadlineButton";
 import { BookmarkButton } from "./BookmarkButton";
 import { useNavigate } from "react-router-dom";
+import { StyledButton } from "./StyledButton";
 
 export const CastingJobCard = ({ cast }) => {
   const navigate = useNavigate();
   const content_id = cast.content_id;
   const handler = (id) => {
-    navigate(`/casting_jobs/${id}`);
+    navigate(`/casting_job/${id}`);
   };
   return (
     <div
@@ -30,8 +30,12 @@ export const CastingJobCard = ({ cast }) => {
           <DeadlineButton closingDate={cast.closing_date} />
         </div>
         <div className="flex items-end justify-items-start gap-1 pt-2">
-          <Button size={"xs"} label={cast.category} cusor={"default"} />
-          <Button size={"xs"} label={cast.category_sub} cusor={"default"} />
+          <StyledButton size={"xs"} label={cast.category} cusor={"default"} />
+          <StyledButton
+            size={"xs"}
+            label={cast.category_sub}
+            cusor={"default"}
+          />
         </div>
       </div>
     </div>

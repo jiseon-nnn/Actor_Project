@@ -39,7 +39,7 @@ const ButtonVariants = cva(
   }
 );
 
-const Button = ({
+export const StyledButton = ({
   variant,
   size,
   isActive,
@@ -59,5 +59,3 @@ const Button = ({
     </button>
   );
 };
-
-export default Button;

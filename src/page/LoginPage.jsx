@@ -1,7 +1,7 @@
-import InputBox from '../component/Input';
-import kakaotalkLoginButton from '../assets/kakaotalk_login_button.png';
-import naverLoginButton from '../assets/naver_login_button.png';
-import googleLoginButton from '../assets/google_login_button.png';
+import kakaotalkLoginButton from "../assets/kakaotalk_login_button.png";
+import naverLoginButton from "../assets/naver_login_button.png";
+import googleLoginButton from "../assets/google_login_button.png";
+import { StyledInput } from "../component/StyledInput";
 export const LoginPage = () => {
   return (
     <div className="flex flex-col border boder-[#E6E6E6] border-solid rounded-3xl w-2/5 h-4/5 justify-around items-center p-5">
@@ -9,11 +9,11 @@ export const LoginPage = () => {
         <h2 className="text-4xl font-bold text-center">로그인</h2>
         <label>
           아이디
-          <InputBox size="default" />
+          <StyledInput size="default" />
         </label>
         <label>
           비밀번호
-          <InputBox size="default" type="password" />
+          <StyledInput size="default" type="password" />
         </label>
         <button className=" h-[50px] bg-slate-200" type="submit">
           acrtor project 회원으로 로그인
