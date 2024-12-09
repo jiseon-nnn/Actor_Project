@@ -12,7 +12,6 @@ export const CastingJobsPage = () => {
       try {
         const response = await axios.get("/mockup_data/castPosting.JSON");
         setCast(response.data);
-        console.log("Fetched Data:", response.data);
       } catch (err) {
         setError(err);
       } finally {

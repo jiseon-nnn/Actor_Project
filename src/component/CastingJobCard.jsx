@@ -19,7 +19,16 @@ export const CastingJobCard = ({ cast }) => {
       }
     }, [closingDate]);
     return (
-      <>{isPast && <Button size={"xxs"} label={"마감"} variant={"orange"} />}</>
+      <>
+        {isPast && (
+          <Button
+            size={"xxs"}
+            label={"마감"}
+            variant={"orange"}
+            cusor={"default"}
+          />
+        )}
+      </>
     );
   };
   return (
@@ -33,7 +42,7 @@ export const CastingJobCard = ({ cast }) => {
           <span className="font-bold text-sm">{cast.title}</span>
           <Bookmark
             onClick={toggleBookmark}
-            className="w-7 h-7"
+            className="w-7 h-7 cursor-pointer"
             fill={`${isBookmarked ? "black" : "none"}`}
           />
         </div>
@@ -42,8 +51,8 @@ export const CastingJobCard = ({ cast }) => {
           <DeadlineButton closingDate={cast.closing_date} />
         </div>
         <div className="flex items-end justify-items-start gap-1 pt-2">
-          <Button size={"xs"} label={cast.category} />
-          <Button size={"xs"} label={cast.category_sub} />
+          <Button size={"xs"} label={cast.category} cusor={"default"} />
+          <Button size={"xs"} label={cast.category_sub} cusor={"default"} />
         </div>
       </div>
     </div>

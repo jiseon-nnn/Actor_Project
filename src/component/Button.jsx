@@ -28,6 +28,9 @@ const ButtonVariants = cva(
       isLogin: {
         true: "",
       },
+      cusor: {
+        default: "cursor-default",
+      },
     },
     defaultVariants: {
       variant: "default",
@@ -36,10 +39,20 @@ const ButtonVariants = cva(
   }
 );
 
-const Button = ({ variant, size, isActive, label, isLogin, ...props }) => {
+const Button = ({
+  variant,
+  size,
+  isActive,
+  label,
+  isLogin,
+  cusor,
+  ...props
+}) => {
   return (
     <button
-      className={cn(ButtonVariants({ variant, size, isActive, isLogin }))}
+      className={cn(
+        ButtonVariants({ variant, size, isActive, isLogin, cusor })
+      )}
       {...props}
     >
       {label}
