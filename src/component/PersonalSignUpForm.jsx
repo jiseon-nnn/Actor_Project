@@ -7,7 +7,10 @@ import { InputWithButton } from "./InputWithButton";
 
 export const PersonalSignUpForm = () => {
   return (
-    <div className="flex justify-start items-center flex-wrap gap-[10px] text-left rounded-[10px] border boder-[#E6E6E6] border-solid p-10 w-[500px] ">
+    <div className="flex justify-start items-center flex-wrap gap-[10px] text-left rounded-[10px] border boder-[#E6E6E6] border-solid p-10 w-[500px]">
+      <p className='font-bold text-[1.7rem]'>
+        회원가입
+      </p>
       <InputWithButton
         label="아이디"
         inputProps={{

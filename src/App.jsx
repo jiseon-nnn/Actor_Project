@@ -7,6 +7,7 @@ import { ActorProfilePage } from "./page/ActorProfilePage";
 import { SignUpPage } from "./page/SignUpPage";
 import { LoginPage } from "./page/LoginPage";
 import { PersonalSignUpPage } from "./page/PersonalSignUpPage";
+import { CastingJobCreatePage } from "./page/CastingJobCreatePage";
 
 function App() {
   return (
@@ -16,12 +17,13 @@ function App() {
       </header>
       <main className="flex justify-center items-center max-w-[1350px] w-full h-full ">
         <Routes>
-          <Route path={"/"} element={<MainPage />} />
-          <Route path={"/casting_jobs"} element={<CastingJobsPage />} />
-          <Route path={"/actor_profile"} element={<ActorProfilePage />} />
-          <Route path={"/sign_up"} element={<SignUpPage />} />
-          <Route path={"/sign_up/personal"} element={<PersonalSignUpPage />} />
-          <Route path={"/login"} element={<LoginPage />} />
+          <Route path={'/'} element={<MainPage />} />
+          <Route path={'/casting_jobs'} element={<CastingJobsPage />} />
+          <Route path={'/create_casting_job'} element={<CastingJobCreatePage />} />
+          <Route path={'/actor_profile'} element={<ActorProfilePage />} />
+          <Route path={'/sign_up'} element={<SignUpPage />} />
+          <Route path={'/sign_up/personal'} element={<PersonalSignUpPage />} />
+          <Route path={'/login'} element={<LoginPage />} />
         </Routes>
       </main>
     </div>
