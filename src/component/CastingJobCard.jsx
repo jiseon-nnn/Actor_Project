@@ -1,36 +1,8 @@
-import { Bookmark } from "lucide-react";
 import Button from "./Button";
-import { useEffect, useState } from "react";
+import { DeadlineButton } from "./DeadlineButton";
+import { BookmarkButton } from "./BookmarkButton";
 
 export const CastingJobCard = ({ cast }) => {
-  const [isBookmarked, setIsBookmarked] = useState(false);
-  const toggleBookmark = () => {
-    setIsBookmarked((prev) => !prev);
-  };
-
-  const DeadlineButton = ({ closingDate }) => {
-    const [isPast, setIsPast] = useState(false);
-
-    useEffect(() => {
-      const targetDate = new Date(closingDate);
-      const now = new Date();
-      if (now > targetDate) {
-        setIsPast(true);
-      }
-    }, [closingDate]);
-    return (
-      <>
-        {isPast && (
-          <Button
-            size={"xxs"}
-            label={"마감"}
-            variant={"orange"}
-            cusor={"default"}
-          />
-        )}
-      </>
-    );
-  };
   return (
     <div className=" w-[200px] border boder-[#E6E6E6] border-solid rounded-xl ">
       <img
@@ -40,11 +12,7 @@ export const CastingJobCard = ({ cast }) => {
       <div className="p-1 flex flex-col gap-2">
         <div className="flex gap-2 ">
           <span className="font-bold text-sm">{cast.title}</span>
-          <Bookmark
-            onClick={toggleBookmark}
-            className="w-7 h-7 cursor-pointer"
-            fill={`${isBookmarked ? "black" : "none"}`}
-          />
+          <BookmarkButton />
         </div>
         <div className="flex justify-between items-center">
           <p className="text-sm">{cast.closing_date.substr(2)}</p>
