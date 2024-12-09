@@ -1,21 +1,29 @@
-import Button from './Button';
 import InputBox from './Input';
-import { InputWithButton } from './InputWithButton';
 
 export const CastingJobCreateForm = () => {
   return (
-    <div className="flex justify-start items-center flex-wrap gap-[10px] text-left p-10 w-[600px]">
-      <p className='font-bold text-[1.7rem]'>
+    <div className="flex justify-start items-center flex-wrap gap-[10px] text-left p-10 w-[1000px]">
+      <div className='font-bold text-[1.7rem]'>
         캐스팅 공고 등록
-      </p>
-      <label>
-        카테고리
-        <InputBox size={'md'} />
-      </label>
-      <label>
-        공고 타이틀
-        <InputBox size={'md'} />
-      </label>
+      </div>
+      <InputWithTitle
+        title="카테고리"
+        inputProps={{
+          size: "sm"
+        }}
+      /> 
     </div>
   );
 };
+
+const InputWithTitle = ({
+  title,
+  inputProps = {}, // InputBox 관련 props
+  }) => (
+  <div className='flex'>
+    <p>{title}</p>
+    <div className="flex items-center gap-[10px]">
+      <InputBox {...inputProps} />
+    </div>
+  </div>
+);
