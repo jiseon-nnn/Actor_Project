@@ -30,10 +30,10 @@ export const CastingJobsPage = () => {
   }
 
   return (
-    <div className="flex flex-wrap gap-10  w-[1000px] ">
-      {cast.map((data) => (
-        <CastingJobCard key={data.content_id} cast={data} />
-      ))}
-    </div>
+      <div className="flex flex-wrap gap-10  w-[1000px] ">
+        {cast.map((data) => (
+          <CastingJobCard key={data.content_id} cast={data} />
+        ))}
+      </div>
   );
 };
