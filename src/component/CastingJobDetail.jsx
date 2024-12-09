@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import Button from "./Button";
+import { StyledButton } from "./StyledButton";
 
 export const CastingJobDetail = () => {
   const { contentId } = useParams();
@@ -35,7 +35,7 @@ export const CastingJobDetail = () => {
   return (
     <div>
       <div>
-        <Button label={"진행 중"} />
+        <StyledButton label={"진행 중"} />
 
         <h1>{castDetail.title}</h1>
       </div>
