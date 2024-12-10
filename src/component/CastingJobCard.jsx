@@ -10,19 +10,24 @@ export const CastingJobCard = ({ cast }) => {
     navigate(`/casting_job/${id}`);
   };
   return (
-    <div
-      onClick={() => {
-        handler(content_id);
-      }}
-      className=" w-[200px] border boder-[#E6E6E6] border-solid rounded-xl "
-    >
+    <div className=" w-[200px] border boder-[#E6E6E6] border-solid rounded-xl ">
       <img
-        src="https://media.istockphoto.com/id/931643150/vector/picture-icon.jpg?s=612x612&w=0&k=20&c=St-gpRn58eIa8EDAHpn_yO4CZZAnGD6wKpln9l3Z3Ok="
-        className="w-[200px] h-[200px] rounded-xl"
+        onClick={() => {
+          handler(content_id);
+        }}
+        src={`${cast.post_img}`}
+        className="w-[200px] h-[200px] rounded-xl cursor-pointer"
       />
       <div className="p-1 flex flex-col gap-2">
         <div className="flex gap-2 ">
-          <span className="font-bold text-sm">{cast.title}</span>
+          <span
+            onClick={() => {
+              handler(content_id);
+            }}
+            className="font-bold text-sm cursor-pointer"
+          >
+            {cast.title}
+          </span>
           <BookmarkButton />
         </div>
         <div className="flex justify-between items-center">

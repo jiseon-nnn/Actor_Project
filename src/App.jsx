@@ -9,7 +9,7 @@ import { LoginPage } from "./page/LoginPage";
 import { PersonalSignUpPage } from "./page/PersonalSignUpPage";
 import { CastingJobCreatePage } from "./page/CastingJobCreatePage";
 import { CompanySignUpPage } from "./page/CompanySignUpPage";
-import { CastingJobDetail } from "./component/CastingJobDetail";
+import { CastingJobDetail } from "./page/CastingJobDetail";
 
 function App() {
   return (
@@ -31,7 +31,7 @@ function App() {
           <Route path={"/sign_up/company"} element={<CompanySignUpPage />} />
           <Route path={"/login"} element={<LoginPage />} />
           <Route
-            path={"/casting_job/:ContentId"}
+            path={"/casting_job/:contentId"}
             element={<CastingJobDetail />}
           />
         </Routes>

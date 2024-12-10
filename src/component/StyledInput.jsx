@@ -31,8 +31,6 @@ const inputVariants = cva(` flex block rounded-lg h-[2rem] p-2 `, {
 export const StyledInput = ({ color, size, disabled, isValid, ...props }) => {
   return (
     <input
-      disabled={disabled}
-      isValid={isValid}
       className={cn(inputVariants({ color, size, disabled, isValid }))}
       {...props}
     />
