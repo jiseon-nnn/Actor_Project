@@ -11,13 +11,15 @@ export const CastingJobCard = ({ cast }) => {
   };
   return (
     <div className=" w-[200px] border boder-[#E6E6E6] border-solid rounded-xl ">
-      <img
-        onClick={() => {
-          handler(content_id);
-        }}
-        src={`${cast.post_img}`}
-        className="w-[200px] h-[200px] rounded-xl cursor-pointer"
-      />
+      <div className="w-full h-[200px] overflow-hidden  ">
+        <img
+          onClick={() => {
+            handler(content_id);
+          }}
+          src={`${cast.post_img}`}
+          className="  rounded-xl cursor-pointer"
+        />
+      </div>
       <div className="p-1 flex flex-col gap-2">
         <div className="flex gap-2 ">
           <span
@@ -32,7 +34,7 @@ export const CastingJobCard = ({ cast }) => {
         </div>
         <div className="flex justify-between items-center">
           <p className="text-sm">{cast.closing_date.substr(2)}</p>
-          <DeadlineButton closingDate={cast.closing_date} />
+          <DeadlineButton closingDate={cast.closing_date} size={"xxs"} />
         </div>
         <div className="flex items-end justify-items-start gap-1 pt-2">
           <StyledButton size={"xs"} label={cast.category} cusor={"default"} />

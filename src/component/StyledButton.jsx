@@ -12,6 +12,7 @@ const ButtonVariants = cva(
         default: "active:scale-100 bg-[#041F32]",
         orange: "bg-[#E96C32]",
         lightgray: "bg-[#D9D9D9] text-[#4C4C4C]",
+        gray: "bg-[#dadada] text-white",
       },
       size: {
         default: "w-[6rem] h-[3rem] text-[0.875rem] ",

@@ -9,7 +9,7 @@ import { LoginPage } from "./page/LoginPage";
 import { PersonalSignUpPage } from "./page/PersonalSignUpPage";
 import { CastingJobCreatePage } from "./page/CastingJobCreatePage";
 import { CompanySignUpPage } from "./page/CompanySignUpPage";
-import { CastingJobDetail } from "./page/CastingJobDetail";
+import { CastingJobDetailPage } from "./page/CastingJobDetailPage";
 
 function App() {
   return (
@@ -32,7 +32,7 @@ function App() {
           <Route path={"/login"} element={<LoginPage />} />
           <Route
             path={"/casting_job/:contentId"}
-            element={<CastingJobDetail />}
+            element={<CastingJobDetailPage />}
           />
         </Routes>
       </main>
