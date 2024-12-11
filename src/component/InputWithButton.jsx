@@ -1,5 +1,5 @@
-import Button from "./Button";
-import InputBox from "./Input";
+import { StyledButton } from "./StyledButton";
+import { StyledInput } from "./StyledInput";
 
 export const InputWithButton = ({
   label,
@@ -9,8 +9,8 @@ export const InputWithButton = ({
   <div>
     <label>{label}</label>
     <div className="flex items-center gap-[10px]">
-      <InputBox {...inputProps} />
-      <Button {...buttonProps} />
+      <StyledInput {...inputProps} />
+      <StyledButton {...buttonProps} />
     </div>
   </div>
 );

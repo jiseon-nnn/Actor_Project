@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import Button from "./Button";
+import { StyledButton } from "./StyledButton";
 
-export const DeadlineButton = ({ closingDate }) => {
+export const DeadlineButton = ({ closingDate, size }) => {
   const [isPast, setIsPast] = useState(false);
 
   useEffect(() => {
@@ -14,8 +14,8 @@ export const DeadlineButton = ({ closingDate }) => {
   return (
     <>
       {isPast && (
-        <Button
-          size={"xxs"}
+        <StyledButton
+          size={size}
           label={"마감"}
           variant={"orange"}
           cusor={"default"}

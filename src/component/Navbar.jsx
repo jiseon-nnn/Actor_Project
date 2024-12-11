@@ -2,14 +2,14 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
-    <div className="flex w-5/6 justify-between font-bold border-b-[#E6E6E6] border-b-solid border-b pb-7">
+    <div className="flex w-5/6 h-full justify-between items-center font-bold  bg-white border-b-[#E6E6E6] border-b-solid border-b">
       <Link to={'/'}>
         <h1 className="text-start text-2xl">
           actor <br />
           project
         </h1>
       </Link>
-      <nav className="flex items-end gap-[400px] text-xl">
+      <nav className="flex gap-[400px] text-xl h-2/5 items-end">
         <ul className="flex gap-[200px]">
           <Link to={'/casting_jobs'}>
             <li>캐스팅 공고</li>

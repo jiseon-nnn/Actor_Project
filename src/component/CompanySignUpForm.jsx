@@ -2,13 +2,9 @@ import { InputWithButton } from "./InputWithButton";
 import { StyledButton } from "./StyledButton";
 import { StyledInput } from "./StyledInput";
 
-// 사용자가 입력한 데이터 관리
-// 유효성 검사
-// 제출 이벤트 처리
-export const PersonalSignUpForm = () => {
+export const CompanySignUpForm = () => {
   return (
     <div className="flex justify-start items-center flex-wrap gap-[10px] text-left rounded-[10px] border boder-[#E6E6E6] border-solid p-10 w-[500px]">
-      <p className="font-bold text-[1.7rem]">회원가입</p>
       <InputWithButton
         label="아이디"
         inputProps={{
@@ -32,15 +28,23 @@ export const PersonalSignUpForm = () => {
         <StyledInput size={"md"} />
       </label>
       <label>
-        이름
+        회사명
         <StyledInput size={"md"} />
       </label>
       <label>
-        생년월일
+        사업자등록번호
         <StyledInput size={"md"} />
       </label>
       <label>
         이메일
+        <StyledInput size={"md"} />
+      </label>
+      <label>
+        홈페이지 링크
+        <StyledInput size={"md"} />
+      </label>
+      <label>
+        담당자명
         <StyledInput size={"md"} />
       </label>
       <InputWithButton

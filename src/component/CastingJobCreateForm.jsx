@@ -1,4 +1,4 @@
-import InputBox from "./Input";
+import { StyledInput } from "./StyledInput";
 
 export const CastingJobCreateForm = () => {
   return (
@@ -21,7 +21,7 @@ const InputWithTitle = ({
   <div className="flex">
     <p>{title}</p>
     <div className="flex items-center gap-[10px]">
-      <InputBox {...inputProps} />
+      <StyledInput {...inputProps} />
     </div>
   </div>
 );
