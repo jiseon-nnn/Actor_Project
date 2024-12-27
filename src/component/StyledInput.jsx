@@ -9,7 +9,7 @@ const inputVariants = cva(` flex block rounded-lg h-[2rem] p-2 `, {
     size: {
       default: "text-[1rem] w-[100%] h-[2.375rem]",
       sm: "text-[0.8rem] w-[300px] h-[2.375rem]",
-      xsm: "text-[0.8rem] w-[30%] h-[2.375rem]",
+      xsm: "text-[0.8rem] w-[186px] h-[2.375rem]",
       md: "text-[1rem] w-[400px] h-[2.375rem]",
     },
     disabled: {

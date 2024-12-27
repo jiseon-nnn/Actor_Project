@@ -25,11 +25,11 @@ export const PersonalSignUpForm = () => {
       />
       <label>
         비밀번호
-        <StyledInput size={"md"} />
+        <StyledInput size={"md"} type="password" />
       </label>
       <label>
         비밀번호 확인
-        <StyledInput size={"md"} />
+        <StyledInput size={"md"} type="password" />
       </label>
       <label>
         이름
@@ -37,16 +37,17 @@ export const PersonalSignUpForm = () => {
       </label>
       <label>
         생년월일
-        <StyledInput size={"md"} />
+        <StyledInput size={"md"} type="date" />
       </label>
       <label>
         이메일
-        <StyledInput size={"md"} />
+        <StyledInput size={"md"} type="email" />
       </label>
       <InputWithButton
         label="휴대폰 번호"
         inputProps={{
           size: "sm",
+          type: "tel",
           placeholder: "휴대폰 번호를 입력하세요",
         }}
         buttonProps={{
